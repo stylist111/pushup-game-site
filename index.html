@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PushHero переехал</title>
+    <link rel="canonical" href="https://ridiculous-monday.tech/" />
+    <!-- The meta refresh is the fallback for when the script below cannot run.
+         It cannot preserve the path, so the script goes first and this only
+         catches the front page. -->
+    <meta http-equiv="refresh" content="0; url=https://ridiculous-monday.tech/" />
+    <script>
+      // Carry the deep link across: /pushup-game-site/solo -> /solo.
+      (function () {
+        var base = '/pushup-game-site/';
+        var path = window.location.pathname;
+        var rest = path.indexOf(base) === 0 ? path.slice(base.length) : '';
+        window.location.replace('https://ridiculous-monday.tech/' + rest + window.location.search + window.location.hash);
+      })();
+    </script>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #08090a;
+        color: #f4f4f5;
+        font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', sans-serif;
+        text-align: center;
+        padding: 24px;
+      }
+      a { color: #7dd3fc; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>PushHero переехал на новый адрес.</p>
+      <p><a href="https://ridiculous-monday.tech/">https://ridiculous-monday.tech</a></p>
+    </div>
+  </body>
+</html>
